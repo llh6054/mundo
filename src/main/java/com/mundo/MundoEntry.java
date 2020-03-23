@@ -1,5 +1,7 @@
 package com.mundo;
 
+import com.mundo.autoconfig.ContextLoader;
+import com.mundo.autoconfig.SimpleContextLoader;
 import com.mundo.processor.CommonSitePageProcessor;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.pipeline.ConsolePipeline;
@@ -11,7 +13,9 @@ import us.codecraft.webmagic.pipeline.ConsolePipeline;
 public class MundoEntry {
 
     public static void main(String[] args) {
-        Spider.create(new CommonSitePageProcessor()).addPipeline(new ConsolePipeline()).addUrl("https://www.xicidaili.com/nn").start();
+        ContextLoader contextLoader = new SimpleContextLoader();
+        contextLoader.loadContext();
+       Spider.create(new CommonSitePageProcessor()).addPipeline(new ConsolePipeline()).addUrl("https://www.xicidaili.com/nn").start();
     }
 
 }
