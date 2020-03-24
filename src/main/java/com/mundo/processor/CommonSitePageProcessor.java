@@ -2,7 +2,7 @@ package com.mundo.processor;
 
 import com.mundo.datafetcher.WildCardDataFetcher;
 import com.mundo.datafetcher.DataFetcher;
-import com.mundo.urlgenerate.CommonUrlGenerator;
+import com.mundo.urlgenerate.WildCardUrlGenerator;
 import com.mundo.urlgenerate.UrlGenerator;
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
@@ -16,7 +16,7 @@ public class CommonSitePageProcessor implements PageProcessor {
 
     private Site site = Site.me().setRetryTimes(3).setSleepTime(1000);
 
-    private UrlGenerator urlGenerator = new CommonUrlGenerator();
+    private UrlGenerator urlGenerator = new WildCardUrlGenerator();
 
     private DataFetcher dataFetcher = new WildCardDataFetcher();
 

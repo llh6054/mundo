@@ -4,7 +4,7 @@ package com.mundo.urlgenerate;
  * @author chubby
  * @date 2020/3/22
  */
-public class CommonUrlGenerator implements UrlGenerator {
+public class WildCardUrlGenerator implements UrlGenerator {
 
     private static final Integer INCREMENT = 1;
 
@@ -14,15 +14,15 @@ public class CommonUrlGenerator implements UrlGenerator {
 
     private Boolean noMoreUrl = false;
 
-    public  CommonUrlGenerator() {
-        new CommonUrlGenerator(this.maxPage, this.curPage);
+    public WildCardUrlGenerator() {
+        new WildCardUrlGenerator(this.maxPage, this.curPage);
     }
 
-    public CommonUrlGenerator(Integer maxPage) {
-        new CommonUrlGenerator(maxPage, this.curPage);
+    public WildCardUrlGenerator(Integer maxPage) {
+        new WildCardUrlGenerator(maxPage, this.curPage);
     }
 
-    public CommonUrlGenerator(Integer maxPage, Integer curPage) {
+    public WildCardUrlGenerator(Integer maxPage, Integer curPage) {
         this.maxPage = maxPage;
         this.curPage = curPage;
     }

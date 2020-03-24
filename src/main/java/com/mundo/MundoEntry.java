@@ -15,7 +15,7 @@ public class MundoEntry {
     public static void main(String[] args) {
         ContextLoader contextLoader = new SimpleContextLoader();
         contextLoader.loadContext();
-       Spider.create(new CommonSitePageProcessor()).addPipeline(new ConsolePipeline()).addUrl("https://www.xicidaili.com/nn").start();
+      // Spider.create(new CommonSitePageProcessor()).addPipeline(new ConsolePipeline()).addUrl("https://www.xicidaili.com/nn").start();
     }
 
 }
